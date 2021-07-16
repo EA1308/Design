@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5g-jB-mmu">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="106"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CFZ-KS-OAk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CFZ-KS-OAk">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="dyV-2V-DX9"/>
@@ -40,19 +40,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czt-EL-79A">
-                                <rect key="frame" x="111" y="31" width="190" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-vm-7yb">
-                                <rect key="frame" x="321.5" y="6" width="21.5" height="10"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <rect key="frame" x="111" y="31" width="190" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nrb-86-OZ9">
-                                <rect key="frame" x="111" y="66" width="36.5" height="6"/>
+                                <rect key="frame" x="111" y="80" width="36.5" height="6"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eC3-Vi-o4h">
                                         <rect key="frame" x="0.0" y="0.0" width="6" height="6"/>
@@ -80,25 +74,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nrb-86-OZ9" firstAttribute="top" secondItem="czt-EL-79A" secondAttribute="bottom" constant="6" id="6Od-0K-XRh"/>
                             <constraint firstItem="g8r-KE-PA6" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="8kI-FX-qEC"/>
-                            <constraint firstItem="3cH-vm-7yb" firstAttribute="leading" secondItem="nrd-ue-Vf7" secondAttribute="trailing" constant="1.5" id="DsT-ph-xGJ"/>
                             <constraint firstItem="g8r-KE-PA6" firstAttribute="leading" secondItem="D5g-jB-mmu" secondAttribute="leading" constant="90" id="E1z-5g-8EV"/>
                             <constraint firstAttribute="bottom" secondItem="nrd-ue-Vf7" secondAttribute="bottom" constant="90" id="H69-zi-8GJ"/>
+                            <constraint firstItem="g8r-KE-PA6" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="Ic6-Nh-ccX"/>
                             <constraint firstItem="nrb-86-OZ9" firstAttribute="leading" secondItem="CFZ-KS-OAk" secondAttribute="trailing" constant="11" id="Jwe-xI-Qk5"/>
                             <constraint firstAttribute="trailing" secondItem="czt-EL-79A" secondAttribute="trailing" constant="42" id="Lic-7b-Lm1"/>
                             <constraint firstItem="CFZ-KS-OAk" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="PfC-R9-rZW"/>
                             <constraint firstItem="nrd-ue-Vf7" firstAttribute="leading" secondItem="MBn-tH-22r" secondAttribute="trailing" constant="164" id="UTl-rC-MF0"/>
-                            <constraint firstItem="3cH-vm-7yb" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" constant="6" id="VDe-J3-Ylq"/>
                             <constraint firstItem="CFZ-KS-OAk" firstAttribute="leading" secondItem="D5g-jB-mmu" secondAttribute="leading" id="Vzf-8v-Mc4"/>
                             <constraint firstItem="czt-EL-79A" firstAttribute="top" secondItem="MBn-tH-22r" secondAttribute="bottom" constant="14" id="XN4-Jb-fG6"/>
                             <constraint firstItem="MBn-tH-22r" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" constant="6" id="Zch-RS-DXT"/>
-                            <constraint firstAttribute="bottom" secondItem="nrb-86-OZ9" secondAttribute="bottom" constant="34" id="atx-aK-puR"/>
+                            <constraint firstAttribute="bottom" secondItem="nrb-86-OZ9" secondAttribute="bottom" constant="20" id="atx-aK-puR"/>
                             <constraint firstAttribute="bottom" secondItem="g8r-KE-PA6" secondAttribute="bottom" constant="84" id="gRN-R9-hoc"/>
                             <constraint firstAttribute="bottom" secondItem="CFZ-KS-OAk" secondAttribute="bottom" id="oyf-61-9ua"/>
                             <constraint firstItem="nrd-ue-Vf7" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" constant="10" id="qzA-TV-Nuf"/>
-                            <constraint firstAttribute="bottom" secondItem="3cH-vm-7yb" secondAttribute="bottom" constant="90" id="s2D-b8-zTp"/>
-                            <constraint firstAttribute="trailing" secondItem="3cH-vm-7yb" secondAttribute="trailing" id="t9m-DQ-exF"/>
                             <constraint firstItem="czt-EL-79A" firstAttribute="leading" secondItem="CFZ-KS-OAk" secondAttribute="trailing" constant="11" id="vRQ-za-OI1"/>
                             <constraint firstItem="MBn-tH-22r" firstAttribute="leading" secondItem="g8r-KE-PA6" secondAttribute="trailing" constant="14" id="vXY-CF-Dvj"/>
                         </constraints>
@@ -118,7 +108,6 @@
                 <outlet property="labelCategory" destination="ctF-Vz-U2s" id="EtN-Qm-Wcg"/>
                 <outlet property="labelDescription" destination="czt-EL-79A" id="aPt-31-B6g"/>
                 <outlet property="labelName" destination="MBn-tH-22r" id="vzy-UR-Luf"/>
-                <outlet property="labelTime" destination="3cH-vm-7yb" id="ylV-wf-BZd"/>
             </connections>
             <point key="canvasLocation" x="89.130434782608702" y="70.3125"/>
         </collectionViewCell>

@@ -22,19 +22,20 @@ class RecentlyCellCollectionViewDataSource: NSObject {
         self.recentlyCellCollectionView = recentlyCellCollectionView
         self.recentlyCellCollectionView?.dataSource = self
         self.recentlyCellCollectionView?.delegate = self
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.itemSize = CGSize(width: UIScreen.bo, height: 35)
-//        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3 - 50 , height: 60)
-//        layout.sectionInset = cgf
-        recentlyCellCollectionView.contentInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 15)
-
-        recentlyCellCollectionView.isScrollEnabled = true
-        layout.scrollDirection = .horizontal
-
-//               layout.minimumInteritemSpacing = 50
-//               layout.minimumLineSpacing = 50
-        recentlyCellCollectionView.collectionViewLayout = layout
+        
+        collectionViewLayout()
     }
+    
+    private func collectionViewLayout() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        recentlyCellCollectionView?.isScrollEnabled = false
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 40 , height: 107)
+        layout.minimumLineSpacing = 20
+        recentlyCellCollectionView?.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        recentlyCellCollectionView?.collectionViewLayout = layout
+    }
+    
     
     func refresh() {
         feedViewModel.fetchNews { [weak self] news in
