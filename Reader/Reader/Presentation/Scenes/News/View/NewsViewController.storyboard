@@ -11,13 +11,28 @@
         <!--News View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="NewsViewController" id="Y6W-OH-hqX" customClass="NewsViewController" customModule="EbayApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsViewController" id="Y6W-OH-hqX" customClass="NewsViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KDw-Ec-z6S">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KDw-Ec-z6S" secondAttribute="bottom" id="1D5-BU-PU5"/>
+                            <constraint firstItem="KDw-Ec-z6S" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Qhj-Wl-tYV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KDw-Ec-z6S" secondAttribute="trailing" id="U1n-8z-pLR"/>
+                            <constraint firstItem="KDw-Ec-z6S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ff1-ox-qup"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newsTableView" destination="KDw-Ec-z6S" id="GMM-nF-MUa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

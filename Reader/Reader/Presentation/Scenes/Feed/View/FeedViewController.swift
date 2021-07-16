@@ -8,22 +8,33 @@
 import UIKit
 
 class FeedViewController: BaseViewController {
-
+    
+    @IBOutlet weak var feedCategoryCollectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var feedCategoryDataSource: FeedCategoryDataSource!
+    private var feedViewModel: FeedViewModelProtocol!
+    private var feedDataSource: FeedDataSource!
+    private var recentlyDataSource: RecentlyCellCollectionViewDataSource!
+    private var newsManager: NewsManagerProtocol!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.registerNib(class: RecentCell.self)
+        feedCategoryCollectionView.registerNib(class: FeedCategoryCell.self)
+        configureFeedCategoryCollectionView()
+        configureTableView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configureFeedCategoryCollectionView() {
+        feedCategoryDataSource = FeedCategoryDataSource(with: feedCategoryCollectionView)
     }
-    */
 
+    func configureTableView() {
+        newsManager = NewsManager()
+        feedViewModel = FeedViewModel(with: newsManager)
+        feedDataSource = FeedDataSource(with: tableView, viewModel: feedViewModel)
+        
+    }
+
+    
 }

@@ -15,12 +15,12 @@ final class FeedCoordinator: CoordinatorProtocol {
 
     init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {
         self.navigationController = navigationController
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
         
-        let vc = FavoritesViewController.instantiateFromStoryboard()
+        let vc = FeedViewController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(named: "ic_heart")
-        vc.title = "Saved"
+        vc.tabBarItem.image = UIImage(named: "ic_home")
+        vc.title = "Feed"
         
         self.navigationController?.viewControllers = [vc]
     

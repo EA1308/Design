@@ -18,8 +18,8 @@ final class FavoritesCoordinator: CoordinatorProtocol {
         
         let vc = FavoritesViewController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(named: "ic_home")
-        vc.title = "Home"
+        vc.tabBarItem.image = UIImage(named: "ic_heart")
+        vc.title = "Favorite"
         
         self.navigationController?.viewControllers = [vc]
     

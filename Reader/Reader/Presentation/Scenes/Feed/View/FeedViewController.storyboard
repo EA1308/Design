@@ -11,13 +11,46 @@
         <!--Feed View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="FeedViewController" id="Y6W-OH-hqX" customClass="FeedViewController" customModule="EbayApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" id="Y6W-OH-hqX" customClass="FeedViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YLN-Fx-V8F">
+                                <rect key="frame" x="0.0" y="44" width="414" height="28"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="YB9-6t-f1a"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hVt-FD-69S">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-5L-yy4">
+                                <rect key="frame" x="0.0" y="72" width="414" height="790"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Upf-5L-yy4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BE1-D1-fTP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Upf-5L-yy4" secondAttribute="bottom" id="PWY-Wd-zWF"/>
+                            <constraint firstItem="Upf-5L-yy4" firstAttribute="top" secondItem="YLN-Fx-V8F" secondAttribute="bottom" id="VVa-9P-bh3"/>
+                            <constraint firstItem="YLN-Fx-V8F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YZi-tg-eIj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Upf-5L-yy4" secondAttribute="trailing" id="bJh-AX-cDb"/>
+                            <constraint firstItem="YLN-Fx-V8F" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="c4O-uS-dFh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YLN-Fx-V8F" secondAttribute="trailing" id="efp-QR-uOh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="feedCategoryCollectionView" destination="YLN-Fx-V8F" id="jJ6-j2-euS"/>
+                        <outlet property="tableView" destination="Upf-5L-yy4" id="uZA-ha-RK5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

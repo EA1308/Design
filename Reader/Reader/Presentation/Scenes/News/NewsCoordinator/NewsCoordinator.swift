@@ -19,8 +19,7 @@ final class NewsCoordinator: CoordinatorProtocol {
         
         let vc = FavoritesViewController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(named: "ic_cart")
-        vc.title = "Cart"
+        vc.tabBarItem.image = UIImage(named: "newspaper")
         
         self.navigationController?.viewControllers = [vc]
     
