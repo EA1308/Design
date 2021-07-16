@@ -18,16 +18,9 @@ class FeedCategoryCell: UICollectionViewCell {
         viewIndicator.layer.cornerRadius = 3
     }
 
-    func configure(with category: String) {
-        labelCategory.text = category
+    func configure(with category: (String,Bool)) {
+        labelCategory.text = category.0
     }
-    
-    func clearColor(){
-        viewIndicator.backgroundColor = .clear
-    }
-    
-    func changeIndicatorColor(with color: String) {
-        viewIndicator.backgroundColor = UIColor(hex: color)
-    }
+
     
 }
