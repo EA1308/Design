@@ -14,10 +14,20 @@ class FeedCategoryCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        viewIndicator.layer.cornerRadius = 3
     }
 
     func configure(with category: String) {
         labelCategory.text = category
+    }
+    
+    func clearColor(){
+        viewIndicator.backgroundColor = .clear
+    }
+    
+    func changeIndicatorColor(with color: String) {
+        viewIndicator.backgroundColor = UIColor(hex: color)
     }
     
 }

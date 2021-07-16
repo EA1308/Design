@@ -1,6 +1,6 @@
 //
 //  FeedCategoryCellViewModel.swift
-//  Reader
+//  Reade5
 //
 //  Created by MacBook  on 16.07.21.
 //
@@ -19,14 +19,11 @@ class FeedCategoryDataSource: NSObject {
         self.feedCategoryCollectionView?.dataSource = self
         self.feedCategoryCollectionView?.delegate = self
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.itemSize = CGSize(width: UIScreen.bo, height: 35)
-//        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3 - 50 , height: 60)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3  , height: 55)
 
         categoryCollectionView.isScrollEnabled = true
         layout.scrollDirection = .horizontal
 
-//               layout.minimumInteritemSpacing = 50
-//               layout.minimumLineSpacing = 50
         categoryCollectionView.collectionViewLayout = layout
     }
     
@@ -42,11 +39,33 @@ extension FeedCategoryDataSource: UICollectionViewDataSource {
         cell.configure(with: categoryItems[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.deque(FeedCategoryCell.self, for: indexPath)
+//        if indexPath.row == 0 {
+//            cell.clearColor()
+//            cell.changeIndicatorColor(with: "005AEE")
+//        }
+//        if indexPath.row == 1 {
+//            cell.clearColor()
+//            cell.changeIndicatorColor(with: "005AEE")
+//        }
+//        if indexPath.row == 2 {
+//            cell.clearColor()
+//            cell.changeIndicatorColor(with: "005AEE")
+//        }
+//        
+        
+    }
 }
 
 extension FeedCategoryDataSource: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 130, height: 41)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: UIScreen.main.bounds.width / 3 - 50, height: 55)
+//    }
+//
+//    func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt: Int) -> CGFloat {
+//        return 57
+//    }
 }
 

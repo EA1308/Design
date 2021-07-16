@@ -11,8 +11,6 @@ class FeedDataSource: NSObject {
     
     private var tableView: UITableView!
     private var viewModel: FeedViewModelProtocol!
-//    private var newsList: [News]?
-//    private var recentlyCellDataSource: RecentlyCellCollectionViewDataSource!
     private var collectionView: UICollectionView!
     
     
@@ -24,6 +22,7 @@ class FeedDataSource: NSObject {
         self.tableView = tableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorStyle = .none
     }
 }
 
@@ -40,13 +39,22 @@ extension FeedDataSource: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         
+        if indexPath.row == 1 {
+            let cell = tableView.deque(RelatedStoriesCell.self, for: indexPath)
+            cell.configure()
+            return cell
+        }
+        
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 250
+            return 300
+        }
+        if indexPath.row == 1 {
+            return 230
         }
         
         return 0

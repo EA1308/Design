@@ -15,13 +15,16 @@ class FeedViewController: BaseViewController {
     private var feedCategoryDataSource: FeedCategoryDataSource!
     private var feedViewModel: FeedViewModelProtocol!
     private var feedDataSource: FeedDataSource!
-    private var recentlyDataSource: RecentlyCellCollectionViewDataSource!
     private var newsManager: NewsManagerProtocol!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerNib(class: RecentCell.self)
         feedCategoryCollectionView.registerNib(class: FeedCategoryCell.self)
         configureFeedCategoryCollectionView()
+        tableView.registerNib(class: RecentCell.self)
+        tableView.registerNib(class: RelatedStoriesCell.self)
+  
         configureTableView()
     }
     

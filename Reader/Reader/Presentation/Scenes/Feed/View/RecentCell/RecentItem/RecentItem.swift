@@ -9,7 +9,7 @@ import UIKit
 
 class RecentItem: UICollectionViewCell {
 
-    @IBOutlet weak var labelTime: UILabel!
+  
     @IBOutlet weak var labelCategory: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelName: UILabel!
@@ -26,8 +26,6 @@ class RecentItem: UICollectionViewCell {
         imgBig.layer.cornerRadius = 30
         imgSmall?.layer.cornerRadius = (imgSmall?.frame.size.width ?? 0.0) / 2
         imgSmall?.clipsToBounds = true
-        imgSmall?.layer.borderWidth = 3.0
-        imgSmall?.layer.borderColor = UIColor.white.cgColor
     }
     
     func configure(with item: News?) {

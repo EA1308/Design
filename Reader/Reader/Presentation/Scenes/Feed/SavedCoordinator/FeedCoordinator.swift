@@ -15,12 +15,17 @@ final class FeedCoordinator: CoordinatorProtocol {
 
     init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {
         self.navigationController = navigationController
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.navigationItem.color
+        navigationController?.navigationBar.barTintColor = UIColor(hex: "4D009A")
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+
+
         
         let vc = FeedViewController.instantiateFromStoryboard()
         vc.coordinator = self
         vc.tabBarItem.image = UIImage(named: "ic_home")
-        vc.title = "Feed"
+        vc.title = "My Feed"
         
         self.navigationController?.viewControllers = [vc]
     

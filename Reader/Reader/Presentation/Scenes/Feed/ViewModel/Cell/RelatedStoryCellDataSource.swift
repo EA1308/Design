@@ -1,5 +1,5 @@
 //
-//  RecentlyCellCollectionViewDataSource.swift
+//  RecentCellDataSource.swift
 //  Reader
 //
 //  Created by MacBook  on 16.07.21.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class RecentlyCellCollectionViewDataSource: NSObject {
-    private var recentlyCellCollectionView: UICollectionView?
+class RelatedStoryCellDataSource: NSObject {
+    private var relatedStoryCollectionView: UICollectionView?
     private var feedViewModel: FeedViewModelProtocol!
     
     var newsList: [News]?
@@ -16,11 +16,10 @@ class RecentlyCellCollectionViewDataSource: NSObject {
     
     init(with recentlyCellCollectionView: UICollectionView, viewModel: FeedViewModelProtocol) {
         super.init()
-
         self.feedViewModel = viewModel
-        self.recentlyCellCollectionView = recentlyCellCollectionView
-        self.recentlyCellCollectionView?.dataSource = self
-        self.recentlyCellCollectionView?.delegate = self
+        self.relatedStoryCollectionView = recentlyCellCollectionView
+        self.relatedStoryCollectionView?.dataSource = self
+        self.relatedStoryCollectionView?.delegate = self
         
         collectionViewLayout()
     }
@@ -28,18 +27,18 @@ class RecentlyCellCollectionViewDataSource: NSObject {
     private func collectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        recentlyCellCollectionView?.isScrollEnabled = false
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 40 , height: 107)
+        relatedStoryCollectionView?.isScrollEnabled = false
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3 - 27 , height: 135)
         layout.minimumLineSpacing = 20
-        recentlyCellCollectionView?.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        recentlyCellCollectionView?.collectionViewLayout = layout
+        relatedStoryCollectionView?.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        relatedStoryCollectionView?.collectionViewLayout = layout
     }
     
     
     func refresh() {
         feedViewModel.fetchNews { [weak self] news in
             self?.newsList = news
-            self?.recentlyCellCollectionView?.reloadData()
+            self?.relatedStoryCollectionView?.reloadData()
         }
     }
     
@@ -47,13 +46,13 @@ class RecentlyCellCollectionViewDataSource: NSObject {
     
 }
 
-extension RecentlyCellCollectionViewDataSource: UICollectionViewDataSource , UICollectionViewDelegate{
+extension RelatedStoryCellDataSource: UICollectionViewDataSource , UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newsList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.deque(RecentItem.self, for: indexPath)
+        let cell = collectionView.deque(RelatedStoriesItem.self, for: indexPath)
         cell.configure(with: newsList?[indexPath.row] )
         return cell
     }

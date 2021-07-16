@@ -69,6 +69,11 @@
 		FA38F64626A1CACB0035E86C /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38F64426A1CACB0035E86C /* RecentCell.swift */; };
 		FA38F64726A1CACB0035E86C /* RecentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA38F64526A1CACB0035E86C /* RecentCell.xib */; };
 		FA38F64926A1E1770035E86C /* RecentlyCellCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38F64826A1E1770035E86C /* RecentlyCellCollectionViewDataSource.swift */; };
+		FA38F64D26A1F2CD0035E86C /* RelatedStoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38F64B26A1F2CD0035E86C /* RelatedStoriesCell.swift */; };
+		FA38F64E26A1F2CD0035E86C /* RelatedStoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA38F64C26A1F2CD0035E86C /* RelatedStoriesCell.xib */; };
+		FA38F65226A1F3030035E86C /* RelatedStoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38F65026A1F3030035E86C /* RelatedStoriesItem.swift */; };
+		FA38F65326A1F3030035E86C /* RelatedStoriesItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA38F65126A1F3030035E86C /* RelatedStoriesItem.xib */; };
+		FA38F65526A213FB0035E86C /* RelatedStoryCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38F65426A213FB0035E86C /* RelatedStoryCellDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +140,11 @@
 		FA38F64426A1CACB0035E86C /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
 		FA38F64526A1CACB0035E86C /* RecentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentCell.xib; sourceTree = "<group>"; };
 		FA38F64826A1E1770035E86C /* RecentlyCellCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyCellCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		FA38F64B26A1F2CD0035E86C /* RelatedStoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedStoriesCell.swift; sourceTree = "<group>"; };
+		FA38F64C26A1F2CD0035E86C /* RelatedStoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedStoriesCell.xib; sourceTree = "<group>"; };
+		FA38F65026A1F3030035E86C /* RelatedStoriesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedStoriesItem.swift; sourceTree = "<group>"; };
+		FA38F65126A1F3030035E86C /* RelatedStoriesItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedStoriesItem.xib; sourceTree = "<group>"; };
+		FA38F65426A213FB0035E86C /* RelatedStoryCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedStoryCellDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +403,7 @@
 		FA38F5D926A183590035E86C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA38F64A26A1F2B50035E86C /* RelatedStories */,
 				FA38F63E26A1CA9B0035E86C /* RecentCell */,
 				FA38F63126A1BC8B0035E86C /* CategoryCell */,
 				FA38F5DA26A183590035E86C /* FeedViewController.storyboard */,
@@ -523,6 +534,7 @@
 			children = (
 				FA38F63C26A1BEAF0035E86C /* FeedCategoryCellViewModel.swift */,
 				FA38F64826A1E1770035E86C /* RecentlyCellCollectionViewDataSource.swift */,
+				FA38F65426A213FB0035E86C /* RelatedStoryCellDataSource.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -544,6 +556,25 @@
 				FA38F64026A1CAAB0035E86C /* RecentItem.xib */,
 			);
 			path = RecentItem;
+			sourceTree = "<group>";
+		};
+		FA38F64A26A1F2B50035E86C /* RelatedStories */ = {
+			isa = PBXGroup;
+			children = (
+				FA38F64F26A1F2DC0035E86C /* RelatedStoriesItem */,
+				FA38F64B26A1F2CD0035E86C /* RelatedStoriesCell.swift */,
+				FA38F64C26A1F2CD0035E86C /* RelatedStoriesCell.xib */,
+			);
+			path = RelatedStories;
+			sourceTree = "<group>";
+		};
+		FA38F64F26A1F2DC0035E86C /* RelatedStoriesItem */ = {
+			isa = PBXGroup;
+			children = (
+				FA38F65026A1F3030035E86C /* RelatedStoriesItem.swift */,
+				FA38F65126A1F3030035E86C /* RelatedStoriesItem.xib */,
+			);
+			path = RelatedStoriesItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA38F56026A17EF20035E86C /* LaunchScreen.storyboard in Resources */,
+				FA38F64E26A1F2CD0035E86C /* RelatedStoriesCell.xib in Resources */,
 				FA38F61226A1A00C0035E86C /* NewsCell.xib in Resources */,
 				FA38F63026A1B3E70035E86C /* GridItem.xib in Resources */,
 				FA38F63526A1BD100035E86C /* FeedCategoryCell.xib in Resources */,
@@ -624,6 +656,7 @@
 				FA38F62526A1B3A80035E86C /* TopCell.xib in Resources */,
 				FA38F5E126A183590035E86C /* FavoritesViewController.storyboard in Resources */,
 				FA38F60826A197D10035E86C /* CategoryCell.xib in Resources */,
+				FA38F65326A1F3030035E86C /* RelatedStoriesItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +683,7 @@
 				FA38F5E526A183590035E86C /* SearchViewController.swift in Sources */,
 				FA38F5EA26A183590035E86C /* FeedCoordinator.swift in Sources */,
 				FA38F63B26A1BE160035E86C /* FeedViewModel.swift in Sources */,
+				FA38F65526A213FB0035E86C /* RelatedStoryCellDataSource.swift in Sources */,
 				FA38F64126A1CAAB0035E86C /* RecentItem.swift in Sources */,
 				FA38F56B26A17F4C0035E86C /* Product.swift in Sources */,
 				FA38F62F26A1B3E70035E86C /* GridItem.swift in Sources */,
@@ -661,6 +695,7 @@
 				FA38F5EF26A183590035E86C /* BaseViewController.swift in Sources */,
 				FA38F55426A17EEF0035E86C /* AppDelegate.swift in Sources */,
 				FA38F58626A17F5A0035E86C /* UICollectionView + Extension.swift in Sources */,
+				FA38F64D26A1F2CD0035E86C /* RelatedStoriesCell.swift in Sources */,
 				FA38F61726A1A4530035E86C /* SearchDataSource.swift in Sources */,
 				FA38F5E726A183590035E86C /* NewsCoordinator.swift in Sources */,
 				FA38F5E926A183590035E86C /* NewsViewController.swift in Sources */,
@@ -677,6 +712,7 @@
 				FA38F5F626A18A250035E86C /* NewsResponse.swift in Sources */,
 				FA38F61F26A1B30F0035E86C /* NewsViewModel.swift in Sources */,
 				FA38F57F26A17F5A0035E86C /* Storyboarded.swift in Sources */,
+				FA38F65226A1F3030035E86C /* RelatedStoriesItem.swift in Sources */,
 				FA38F60726A197D10035E86C /* CategoryCell.swift in Sources */,
 				FA38F63D26A1BEAF0035E86C /* FeedCategoryCellViewModel.swift in Sources */,
 				FA38F62126A1B3190035E86C /* NewsDataSource.swift in Sources */,

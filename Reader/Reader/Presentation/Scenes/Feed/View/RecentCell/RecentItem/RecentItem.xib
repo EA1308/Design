@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecentItem" customModule="Reader" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecentItem" id="gTV-IL-0wX" customClass="RecentItem" customModule="Reader" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="106"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -27,14 +27,14 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8r-KE-PA6">
-                                <rect key="frame" x="90" y="0.0" width="22" height="22"/>
+                                <rect key="frame" x="80" y="0.0" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="CDq-5X-7d6"/>
                                     <constraint firstAttribute="height" constant="22" id="FFf-TF-1il"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-tH-22r">
-                                <rect key="frame" x="126" y="6" width="24" height="11"/>
+                                <rect key="frame" x="116" y="6" width="24" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.30196078431372547" green="0.0" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="nrd-ue-Vf7">
-                                <rect key="frame" x="314" y="10" width="6" height="6"/>
+                                <rect key="frame" x="304" y="10" width="6" height="6"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="KVO-Ap-Z4m"/>
                                     <constraint firstAttribute="width" constant="6" id="cfb-Gn-Af6"/>
@@ -75,7 +75,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="g8r-KE-PA6" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="8kI-FX-qEC"/>
-                            <constraint firstItem="g8r-KE-PA6" firstAttribute="leading" secondItem="D5g-jB-mmu" secondAttribute="leading" constant="90" id="E1z-5g-8EV"/>
+                            <constraint firstItem="g8r-KE-PA6" firstAttribute="leading" secondItem="D5g-jB-mmu" secondAttribute="leading" constant="80" id="E1z-5g-8EV"/>
                             <constraint firstAttribute="bottom" secondItem="nrd-ue-Vf7" secondAttribute="bottom" constant="90" id="H69-zi-8GJ"/>
                             <constraint firstItem="g8r-KE-PA6" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="Ic6-Nh-ccX"/>
                             <constraint firstItem="nrb-86-OZ9" firstAttribute="leading" secondItem="CFZ-KS-OAk" secondAttribute="trailing" constant="11" id="Jwe-xI-Qk5"/>
