@@ -19,5 +19,5 @@ protocol CoordinatorProtocol: AnyObject {
 
 extension CoordinatorProtocol {
     
-  
+    func start(){}
 }

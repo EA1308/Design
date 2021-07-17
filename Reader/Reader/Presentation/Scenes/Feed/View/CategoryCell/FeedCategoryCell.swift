@@ -18,8 +18,8 @@ class FeedCategoryCell: UICollectionViewCell {
         viewIndicator.layer.cornerRadius = 3
     }
 
-    func configure(with category: (String,Bool)) {
-        labelCategory.text = category.0
+    func configure(with category: String) {
+        labelCategory.text = category
     }
 
     

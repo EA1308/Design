@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="Y6W-OH-hqX" customClass="SearchViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,10 +34,10 @@
                                 <state key="normal" image="ic_search"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ix4-ni-7zG">
-                                <rect key="frame" x="17" y="104" width="397" height="41"/>
+                                <rect key="frame" x="17" y="104" width="397" height="70"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="VDj-OO-qOL"/>
+                                    <constraint firstAttribute="height" constant="70" id="VDj-OO-qOL"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4iE-W7-3Sv">
                                     <size key="itemSize" width="128" height="128"/>
@@ -48,7 +48,7 @@
                                 <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="218" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="956-x7-xkW">
-                                <rect key="frame" x="0.0" y="165" width="414" height="571"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="513"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -64,12 +64,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Tuk-7i-INM" secondAttribute="trailing" constant="17" id="V37-fc-hpG"/>
                             <constraint firstItem="Tuk-7i-INM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="37" id="dha-nV-eOh"/>
                             <constraint firstItem="956-x7-xkW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dqu-Md-9PY"/>
-                            <constraint firstItem="956-x7-xkW" firstAttribute="top" secondItem="Ix4-ni-7zG" secondAttribute="bottom" constant="20" id="nGJ-HP-U6H"/>
+                            <constraint firstItem="956-x7-xkW" firstAttribute="top" secondItem="Ix4-ni-7zG" secondAttribute="bottom" id="nGJ-HP-U6H"/>
                             <constraint firstItem="Ix4-ni-7zG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="17" id="pto-hi-e8a"/>
                             <constraint firstItem="Ix4-ni-7zG" firstAttribute="top" secondItem="Tuk-7i-INM" secondAttribute="bottom" constant="17" id="xVt-qu-j4a"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VwI-SV-F02" secondAttribute="trailing" constant="361" id="zNV-yx-hap"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="zwe-AG-ixV"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoryCollectionView" destination="Ix4-ni-7zG" id="Spq-dw-hgM"/>
                         <outlet property="searchBar" destination="Tuk-7i-INM" id="zA1-bg-n9v"/>
@@ -83,6 +85,7 @@
     </scenes>
     <resources>
         <image name="ic_search" width="15" height="15"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

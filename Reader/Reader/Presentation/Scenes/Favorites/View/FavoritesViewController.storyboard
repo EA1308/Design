@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorites View Controller-->
+        <!--Favorites-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="FavoritesViewController" id="Y6W-OH-hqX" customClass="FavoritesViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,12 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_favorite" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-IW-ccw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_favorite" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-IW-ccw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYo-mg-1m1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-hN-S2q">
+                                        <rect key="frame" x="0.0" y="180" width="414" height="633"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.089999999999999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Mbl-hN-S2q" firstAttribute="leading" secondItem="YYo-mg-1m1" secondAttribute="leading" id="ECM-43-WIx"/>
+                                    <constraint firstItem="Mbl-hN-S2q" firstAttribute="top" secondItem="YYo-mg-1m1" secondAttribute="top" constant="180" id="TcL-Nm-A9H"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mbl-hN-S2q" secondAttribute="trailing" id="cdp-D5-vfu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mbl-hN-S2q" secondAttribute="bottom" id="ntQ-gH-cLE"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -37,6 +49,11 @@
                             <constraint firstItem="bcv-IW-ccw" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="sAe-lU-mp9"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="qcQ-wQ-SQB"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mbl-hN-S2q" id="N76-cE-hfg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +61,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="img_favorite" width="282" height="501"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -34,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-tH-22r">
-                                <rect key="frame" x="116" y="6" width="24" height="11"/>
+                                <rect key="frame" x="116" y="6" width="207" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" red="0.30196078431372547" green="0.0" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -64,31 +64,22 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="nrd-ue-Vf7">
-                                <rect key="frame" x="304" y="10" width="6" height="6"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="6" id="KVO-Ap-Z4m"/>
-                                    <constraint firstAttribute="width" constant="6" id="cfb-Gn-Af6"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="g8r-KE-PA6" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="8kI-FX-qEC"/>
                             <constraint firstItem="g8r-KE-PA6" firstAttribute="leading" secondItem="D5g-jB-mmu" secondAttribute="leading" constant="80" id="E1z-5g-8EV"/>
-                            <constraint firstAttribute="bottom" secondItem="nrd-ue-Vf7" secondAttribute="bottom" constant="90" id="H69-zi-8GJ"/>
+                            <constraint firstAttribute="trailing" secondItem="MBn-tH-22r" secondAttribute="trailing" constant="20" id="HS2-4V-eio"/>
                             <constraint firstItem="g8r-KE-PA6" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="Ic6-Nh-ccX"/>
                             <constraint firstItem="nrb-86-OZ9" firstAttribute="leading" secondItem="CFZ-KS-OAk" secondAttribute="trailing" constant="11" id="Jwe-xI-Qk5"/>
                             <constraint firstAttribute="trailing" secondItem="czt-EL-79A" secondAttribute="trailing" constant="42" id="Lic-7b-Lm1"/>
                             <constraint firstItem="CFZ-KS-OAk" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" id="PfC-R9-rZW"/>
-                            <constraint firstItem="nrd-ue-Vf7" firstAttribute="leading" secondItem="MBn-tH-22r" secondAttribute="trailing" constant="164" id="UTl-rC-MF0"/>
                             <constraint firstItem="CFZ-KS-OAk" firstAttribute="leading" secondItem="D5g-jB-mmu" secondAttribute="leading" id="Vzf-8v-Mc4"/>
                             <constraint firstItem="czt-EL-79A" firstAttribute="top" secondItem="MBn-tH-22r" secondAttribute="bottom" constant="14" id="XN4-Jb-fG6"/>
                             <constraint firstItem="MBn-tH-22r" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" constant="6" id="Zch-RS-DXT"/>
                             <constraint firstAttribute="bottom" secondItem="nrb-86-OZ9" secondAttribute="bottom" constant="20" id="atx-aK-puR"/>
                             <constraint firstAttribute="bottom" secondItem="g8r-KE-PA6" secondAttribute="bottom" constant="84" id="gRN-R9-hoc"/>
                             <constraint firstAttribute="bottom" secondItem="CFZ-KS-OAk" secondAttribute="bottom" id="oyf-61-9ua"/>
-                            <constraint firstItem="nrd-ue-Vf7" firstAttribute="top" secondItem="D5g-jB-mmu" secondAttribute="top" constant="10" id="qzA-TV-Nuf"/>
                             <constraint firstItem="czt-EL-79A" firstAttribute="leading" secondItem="CFZ-KS-OAk" secondAttribute="trailing" constant="11" id="vRQ-za-OI1"/>
                             <constraint firstItem="MBn-tH-22r" firstAttribute="leading" secondItem="g8r-KE-PA6" secondAttribute="trailing" constant="14" id="vXY-CF-Dvj"/>
                         </constraints>
@@ -113,7 +104,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic_search" width="15" height="15"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

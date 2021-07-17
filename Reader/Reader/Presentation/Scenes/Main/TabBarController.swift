@@ -20,10 +20,10 @@ class TabBarController: UITabBarController, Storyboarded, CoordinatorDelegate {
         super.viewDidLoad()
 
         viewControllers = [
-            favoritesCoordinator.navigationController!,
+            feedCoordinator.navigationController!,
             searchCoordinator.navigationController!,
             newsCoordinator.navigationController!,
-            feedCoordinator.navigationController!,
+            favoritesCoordinator.navigationController!,
         ]
     }
     

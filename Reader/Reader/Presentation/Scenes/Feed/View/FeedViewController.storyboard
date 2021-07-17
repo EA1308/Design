@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Feed View Controller-->
+        <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="FeedViewController" id="Y6W-OH-hqX" customClass="FeedViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                                 <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-5L-yy4">
-                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -47,6 +47,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YLN-Fx-V8F" secondAttribute="trailing" id="efp-QR-uOh"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="d77-Pa-aRq"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="feedCategoryCollectionView" destination="YLN-Fx-V8F" id="jJ6-j2-euS"/>
                         <outlet property="tableView" destination="Upf-5L-yy4" id="uZA-ha-RK5"/>
@@ -58,6 +60,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

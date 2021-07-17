@@ -18,11 +18,10 @@ final class SearchCoordinator: CoordinatorProtocol {
         
         let vc = SearchViewController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(named: "ic_search")
-        vc.title = "Search"
-        
+        vc.tabBarItem.image = UIImage(named: "ic_search")        
         self.navigationController?.viewControllers = [vc]
     
+        
     }
     
     func start() {

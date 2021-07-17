@@ -9,7 +9,7 @@ import  UIKit
 
 class FeedCategoryDataSource: NSObject {
     private var feedCategoryCollectionView: UICollectionView?
-    private var categoryItems = [("Recent",true), ("Popular",false), ("Nearby",false)]
+    private var categoryItems = ["Recent", "Popular", "Nearby"]
     private var isSelected = 0
     
     init(with categoryCollectionView: UICollectionView ) {

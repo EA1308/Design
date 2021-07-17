@@ -15,11 +15,12 @@ final class NewsCoordinator: CoordinatorProtocol {
 
     init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {
         self.navigationController = navigationController
-        self.navigationController?.isNavigationBarHidden = true
-        
-        let vc = FavoritesViewController.instantiateFromStoryboard()
+        self.navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor(hex: "505AEF")
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        let vc = NewsViewController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(named: "newspaper")
         
         self.navigationController?.viewControllers = [vc]
     

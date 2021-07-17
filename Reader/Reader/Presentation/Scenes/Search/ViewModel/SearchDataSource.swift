@@ -29,18 +29,7 @@ class SearchDataSource: NSObject {
         })
     }
 //
-    func updateTableView(with category: Int) {
-        print(category)
 
-        if category == 0 {
-            refresh()
-        } else if category == 1 {
-            newsList?.removeAll()
-            let featured = Featured(title: "eka", imgName: "cover1")
-            featuredList?.append(featured)
-
-        }
-    }
     
     
 }

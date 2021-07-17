@@ -20,24 +20,54 @@ class FeedViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        feedCategoryCollectionView.registerNib(class: FeedCategoryCell.self)
+        addNavigationButtons()
+        registerNibs()
         configureFeedCategoryCollectionView()
+        configureTableView()
+        navigationController?.navigationBar.topItem?.title = "My Feeds"
+
+    }
+    
+    func registerNibs() {
+        feedCategoryCollectionView.registerNib(class: FeedCategoryCell.self)
         tableView.registerNib(class: RecentCell.self)
         tableView.registerNib(class: RelatedStoriesCell.self)
-  
-        configureTableView()
     }
+    
+    func addNavigationButtons() {
+        let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        rightButton.setBackgroundImage(UIImage(named: "ic_search"), for: .normal)
+        rightButton.addTarget(self, action: #selector(handleRightButton), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+        self.navigationItem.rightBarButtonItem?.tintColor = .white
+
+        
+        let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 16))
+        leftButton.setBackgroundImage(UIImage(named: "ic_menu"), for: .normal)
+        leftButton.addTarget(self, action: #selector(handleLeftButton), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        self.navigationItem.leftBarButtonItem?.tintColor = .white
+    }
+    
+    
+    @objc func handleRightButton() {
+        print("rightButton")
+    }
+    
+    @objc func handleLeftButton() {
+        print("leftButton")
+    }
+    
     
     func configureFeedCategoryCollectionView() {
         feedCategoryDataSource = FeedCategoryDataSource(with: feedCategoryCollectionView)
     }
-
+    
     func configureTableView() {
         newsManager = NewsManager()
         feedViewModel = FeedViewModel(with: newsManager)
         feedDataSource = FeedDataSource(with: tableView, viewModel: feedViewModel)
         
     }
-
     
 }

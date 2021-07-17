@@ -9,6 +9,7 @@ import UIKit
 
 class GridItem: UICollectionViewCell {
 
+    @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelCategory: UILabel!
     @IBOutlet weak var labelTitle: UILabel!
@@ -16,6 +17,9 @@ class GridItem: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        categoryView.layer.cornerRadius = 8
+        imgPoster.layer.cornerRadius = 8
+        categoryView.backgroundColor = .randomColor
     }
     
     func configure(with item: News?) {

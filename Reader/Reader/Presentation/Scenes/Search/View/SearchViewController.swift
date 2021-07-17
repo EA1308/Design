@@ -26,6 +26,8 @@ class SearchViewController: BaseViewController, UISearchBarDelegate {
     }
     
     func configureSearchBar() {
+        searchBar.layer.borderWidth = 0.5
+        searchBar.layer.borderColor = UIColor.gray.cgColor
         searchBar.clipsToBounds = true
         searchBar.borderStyle = .none
         searchBar.layer.cornerRadius = 23

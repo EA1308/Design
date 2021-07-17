@@ -11,6 +11,8 @@ class CategoryCollectionViewDataSource: NSObject {
     private var categoryCollectionView: UICollectionView?
     private var searchDataSource: SearchDataSource!
     private var menuItems = ["Latest", "Featured", "Nearby", "Popular"]
+    private var isSelected = 0
+
     
     init(with categoryCollectionView: UICollectionView, searchDataSource: SearchDataSource ) {
         super.init()
@@ -21,9 +23,7 @@ class CategoryCollectionViewDataSource: NSObject {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         categoryCollectionView.isScrollEnabled = true
         layout.scrollDirection = .horizontal
-
-               layout.minimumInteritemSpacing = 50
-               layout.minimumLineSpacing = 50
+        layout.minimumInteritemSpacing = 10
         categoryCollectionView.collectionViewLayout = layout
     }
     
@@ -36,14 +36,19 @@ extension CategoryCollectionViewDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.deque(CategoryCell.self, for: indexPath)
+        if indexPath.row == isSelected {
+            cell.configureIndicator()
+        } else {
+            cell.configureViewCategory()
+        }
         cell.configure(with: menuItems[indexPath.row])
         return cell
     }
 }
 extension CategoryCollectionViewDataSource: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        searchDataSource.updateTableView(with: indexPath.row)
+        isSelected = indexPath.row
+        collectionView.reloadData()
     }
     
     
@@ -51,10 +56,7 @@ extension CategoryCollectionViewDataSource: UICollectionViewDelegate {
 
 extension CategoryCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: 41)
-        
-
-        
+        return CGSize(width: 110, height: 70)
     }
 }
 
